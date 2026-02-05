@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DROP MASTERY — Lista de Espera</title>
+<style>
+  /* ===== CORES DROP MASTERY ===== */
+  :root {
+    --primary: #e10600;       /* vermelho principal */
+    --secondary: #ff2b2b;     /* vermelho secundário */
+    --dark: #0b0b0b;          /* fundo principal */
+    --gray: #1a1a1a;          /* fundo cinza escuro */
+    --white: #ffffff;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--dark);
+    color: var(--white);
+  }
+
+  a { text-decoration: none; }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    text-align: center;
+  }
+
+  h1 {
+    color: var(--primary);
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 40px;
+  }
+
+  .benefits {
+    text-align: left;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+  }
+
+  .benefits li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+
+  .benefits li::before {
+    content: "";
+    color: var(--primary);
+    margin-right: 10px;
+  }
+
+  form {
+    background-color: var(--gray);
+    padding: 30px;
+    border-radius: 12px;
+  }
+
+  input, select, textarea, button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+  }
+
+  input, select, textarea {
+    background-color: #111;
+    color: #fff;
+  }
+
+  textarea { resize: vertical; min-height: 80px; }
+
+  button {
+    background-color: var(--primary);
+    color: var(--white);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    background-color: var(--secondary);
+  }
+
+  .cta {
+    margin-top: 20px;
+    font-size: 0.95rem;
+    color: #ccc;
+  }
+
+  @media(max-width: 600px){
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.2rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container" id="landing">
+  <h1>DROP MASTERY</h1>
+  <h2>Do zero à sua primeira venda com dropshipping</h2>
+
+  <p>Um guia prático que mostra como escolher produtos, montar uma loja Shopify e preparar suas primeiras vendas — mesmo começando do zero.</p>
+
+  <p>O lançamento oficial ainda não aconteceu. Quem entrar na lista de espera será avisado primeiro e poderá receber bônus exclusivos, incluindo:</p>
+
+  <ul class="benefits">
+    <li>Templates de anúncios prontos</li>
+    <li>Lista de fornecedores confiáveis</li>
+    <li>Conteúdos antecipados sobre como começar corretamente</li>
+  </ul>
+
+  <form id="dropForm">
+    <!-- NOME -->
+    <input type="text" name="entry.1377722835" placeholder="Qual é o seu nome?" required>
+
+    <!-- WHATSAPP -->
+    <input type="text" name="entry.1635352998" placeholder="Qual é o seu WhatsApp?" required>
+
+    <!-- EXPERIÊNCIA ANTERIOR -->
+    <select name="entry.1674570689" required>
+      <option value="">Você já tentou ganhar dinheiro online antes?</option>
+      <option value="Nunca tentei">Nunca tentei</option>
+      <option value="Já tentei mas não tive resultado">Já tentei mas não tive resultado</option>
+      <option value="Tenho pouca experiência">Tenho pouca experiência</option>
+    </select>
+
+    <!-- IMPEDIMENTOS -->
+    <textarea name="entry.1331785579" placeholder="O que mais te impede hoje de começar a ganhar dinheiro online?" required></textarea>
+
+    <!-- DROPSHIPPING -->
+    <select name="entry.1453629363" required>
+      <option value="">Você já ouviu falar de dropshipping?</option>
+      <option value="Nunca ouvi falar">Nunca ouvi falar</option>
+      <option value="Já ouvi falar mas não entendo">Já ouvi falar mas não entendo</option>
+      <option value="Já estudei um pouco">Já estudei um pouco</option>
+    </select>
+
+    <!-- INVESTIMENTO -->
+    <select name="entry.244963838" required>
+      <option value="">Quanto você acha que consegue investir para começar um negócio online?</option>
+      <option value="Até 50$">Até 50$</option>
+      <option value="50$ a 150$">50$ a 150$</option>
+      <option value="150$ a 300$">150$ a 300$</option>
+      <option value="Mais de 300$">Mais de 300$</option>
+    </select>
+
+    <button type="submit">Entrar na lista de espera</button>
+  </form>
+
+  <p class="cta">As vagas iniciais serão limitadas. Garanta sua chance agora!</p>
+</div>
+
+<script>
+  const form = document.getElementById('dropForm');
+  const landing = document.getElementById('landing');
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault(); // evita envio padrão
+    const formData = new FormData(form);
+
+    // envia para o Google Forms
+    fetch('https://docs.google.com/forms/d/e/1FAIpQLSd2rRzUykWEbAYdUec7bfVK8HzyAZ7PYrQ00Q3xVPl7HzYlTw/formResponse', {
+      method: 'POST',
+      body: formData,
+      mode: 'no-cors'
+    }).then(() => {
+      // substitui o conteúdo da landing com a mensagem de obrigado
+      landing.innerHTML = `
+        <h1>Obrigado!</h1>
+        <p>Você entrou na lista de espera do Drop MASTERY. Fique de olho no seu WhatsApp e prepare-se para começar!</p>
+      `;
+    }).catch(() => {
+      // caso dê algum erro (raro)
+      landing.innerHTML = `
+        <h1>Oops!</h1>
+        <p>Algo deu errado. Tente novamente ou contate nosso suporte.</p>
+      `;
+    });
+  });
+</script>
+
+</body>
+</html>
