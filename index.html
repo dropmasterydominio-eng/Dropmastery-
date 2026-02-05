@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DROP MASTERY — Lista de Espera</title>
+<title>DROP MASTERY â€” Lista de Espera</title>
 <style>
   /* ===== CORES DROP MASTERY ===== */
   :root {
     --primary: #e10600;       /* vermelho principal */
-    --secondary: #ff2b2b;     /* vermelho secundário */
+    --secondary: #ff2b2b;     /* vermelho secundÃ¡rio */
     --dark: #0b0b0b;          /* fundo principal */
     --gray: #1a1a1a;          /* fundo cinza escuro */
     --white: #ffffff;
@@ -110,48 +110,48 @@
 
 <div class="container" id="landing">
   <h1>DROP MASTERY</h1>
-  <h2>Do zero à sua primeira venda com dropshipping</h2>
+  <h2>Do zero Ã  sua primeira venda com dropshipping</h2>
 
-  <p>Um guia prático que mostra como escolher produtos, montar uma loja Shopify e preparar suas primeiras vendas — mesmo começando do zero.</p>
+  <p>Um guia prÃ¡tico que mostra como escolher produtos, montar uma loja Shopify e preparar suas primeiras vendas â€” mesmo comeÃ§ando do zero.</p>
 
-  <p>O lançamento oficial ainda não aconteceu. Quem entrar na lista de espera será avisado primeiro e poderá receber bônus exclusivos, incluindo:</p>
+  <p>O lanÃ§amento oficial ainda nÃ£o aconteceu. Quem entrar na lista de espera serÃ¡ avisado primeiro e poderÃ¡ receber bÃ´nus exclusivos, incluindo:</p>
 
   <ul class="benefits">
-    <li>Templates de anúncios prontos</li>
-    <li>Lista de fornecedores confiáveis</li>
-    <li>Conteúdos antecipados sobre como começar corretamente</li>
+    <li>Templates de anÃºncios prontos</li>
+    <li>Lista de fornecedores confiÃ¡veis</li>
+    <li>ConteÃºdos antecipados sobre como comeÃ§ar corretamente</li>
   </ul>
 
   <form id="dropForm">
     <!-- NOME -->
-    <input type="text" name="entry.1377722835" placeholder="Qual é o seu nome?" required>
+    <input type="text" name="entry.1377722835" placeholder="Qual Ã© o seu nome?" required>
 
     <!-- WHATSAPP -->
-    <input type="text" name="entry.1635352998" placeholder="Qual é o seu WhatsApp?" required>
+    <input type="text" name="entry.1635352998" placeholder="Qual Ã© o seu WhatsApp?" required>
 
-    <!-- EXPERIÊNCIA ANTERIOR -->
+    <!-- EXPERIÃŠNCIA ANTERIOR -->
     <select name="entry.1674570689" required>
-      <option value="">Você já tentou ganhar dinheiro online antes?</option>
+      <option value="">VocÃª jÃ¡ tentou ganhar dinheiro online antes?</option>
       <option value="Nunca tentei">Nunca tentei</option>
-      <option value="Já tentei mas não tive resultado">Já tentei mas não tive resultado</option>
-      <option value="Tenho pouca experiência">Tenho pouca experiência</option>
+      <option value="JÃ¡ tentei mas nÃ£o tive resultado">JÃ¡ tentei mas nÃ£o tive resultado</option>
+      <option value="Tenho pouca experiÃªncia">Tenho pouca experiÃªncia</option>
     </select>
 
     <!-- IMPEDIMENTOS -->
-    <textarea name="entry.1331785579" placeholder="O que mais te impede hoje de começar a ganhar dinheiro online?" required></textarea>
+    <textarea name="entry.1331785579" placeholder="O que mais te impede hoje de comeÃ§ar a ganhar dinheiro online?" required></textarea>
 
     <!-- DROPSHIPPING -->
     <select name="entry.1453629363" required>
-      <option value="">Você já ouviu falar de dropshipping?</option>
+      <option value="">VocÃª jÃ¡ ouviu falar de dropshipping?</option>
       <option value="Nunca ouvi falar">Nunca ouvi falar</option>
-      <option value="Já ouvi falar mas não entendo">Já ouvi falar mas não entendo</option>
-      <option value="Já estudei um pouco">Já estudei um pouco</option>
+      <option value="JÃ¡ ouvi falar mas nÃ£o entendo">JÃ¡ ouvi falar mas nÃ£o entendo</option>
+      <option value="JÃ¡ estudei um pouco">JÃ¡ estudei um pouco</option>
     </select>
 
     <!-- INVESTIMENTO -->
     <select name="entry.244963838" required>
-      <option value="">Quanto você acha que consegue investir para começar um negócio online?</option>
-      <option value="Até 50$">Até 50$</option>
+      <option value="">Quanto vocÃª acha que consegue investir para comeÃ§ar um negÃ³cio online?</option>
+      <option value="AtÃ© 50$">AtÃ© 50$</option>
       <option value="50$ a 150$">50$ a 150$</option>
       <option value="150$ a 300$">150$ a 300$</option>
       <option value="Mais de 300$">Mais de 300$</option>
@@ -160,7 +160,7 @@
     <button type="submit">Entrar na lista de espera</button>
   </form>
 
-  <p class="cta">As vagas iniciais serão limitadas. Garanta sua chance agora!</p>
+  <p class="cta">As vagas iniciais serÃ£o limitadas. Garanta sua chance agora!</p>
 </div>
 
 <script>
@@ -168,7 +168,7 @@
   const landing = document.getElementById('landing');
 
   form.addEventListener('submit', function(e){
-    e.preventDefault(); // evita envio padrão
+    e.preventDefault(); // evita envio padrÃ£o
     const formData = new FormData(form);
 
     // envia para o Google Forms
@@ -177,13 +177,13 @@
       body: formData,
       mode: 'no-cors'
     }).then(() => {
-      // substitui o conteúdo da landing com a mensagem de obrigado
+      // substitui o conteÃºdo da landing com a mensagem de obrigado
       landing.innerHTML = `
         <h1>Obrigado!</h1>
-        <p>Você entrou na lista de espera do Drop MASTERY. Fique de olho no seu WhatsApp e prepare-se para começar!</p>
+        <p>VocÃª entrou na lista de espera do Drop MASTERY. Fique de olho no seu WhatsApp e prepare-se para comeÃ§ar!</p>
       `;
     }).catch(() => {
-      // caso dê algum erro (raro)
+      // caso dÃª algum erro (raro)
       landing.innerHTML = `
         <h1>Oops!</h1>
         <p>Algo deu errado. Tente novamente ou contate nosso suporte.</p>
