@@ -907,34 +907,42 @@ setInterval(showPurchaseNotification, 15000);
 </script>
 
 <script>
-// Redirecionamento universal
+
 const BACK_REDIRECT_URL = "https://dropmasterydominio-eng.github.io/BACKREDIRRCTED2/";
 
-// DESKTOP - mouse saindo pelo topo
+/* =======================
+DESKTOP EXIT INTENT
+======================= */
 document.addEventListener("mouseleave", function(e){
   if(e.clientY < 0 && window.innerWidth > 768){
     window.location.href = BACK_REDIRECT_URL;
   }
 });
 
-// MOBILE - detecta quando o usuário rola até o topo da página rapidamente
-let lastScroll = window.scrollY;
-window.addEventListener("scroll", function(){
-  const currentScroll = window.scrollY;
-  if(window.innerWidth <= 768 && lastScroll - currentScroll > 50 && currentScroll < 50){
-    window.location.href = BACK_REDIRECT_URL;
-  }
-  lastScroll = currentScroll;
+/* =======================
+MOBILE + DESKTOP BACK BUTTON
+======================= */
+
+// cria histórico falso para capturar botão voltar
+history.pushState({}, "", location.href);
+
+window.addEventListener("popstate", function () {
+  window.location.href = BACK_REDIRECT_URL;
 });
 
-// Voltar do navegador (desktop e mobile)
-history.pushState(null, null, location.href);
-window.onpopstate = function () {
-  window.location.href = BACK_REDIRECT_URL;
-};
+/* =======================
+MOBILE VISIBILITY CHANGE (quando troca de aba ou tenta sair)
+======================= */
+document.addEventListener("visibilitychange", function () {
+  if (document.visibilityState === "hidden" && window.innerWidth <= 768) {
+    window.location.href = BACK_REDIRECT_URL;
+  }
+});
+
 </script>
  
 </body>
   </html>
+
 
 
