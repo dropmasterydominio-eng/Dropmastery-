@@ -834,11 +834,17 @@ Este produto não garante resultados financeiros específicos.
 <script>
 const CHECKOUT_URL = "https://pay.hotmart.com/N102929996D?off=svkkyh8t&lang=PT_BR&sck=HOTMART_PLATFORM&bid=1769792220558";
 
-// Seleciona todos os botões da página com classe 'btn'
 document.querySelectorAll(".btn").forEach(btn => {
   btn.addEventListener("click", e => {
-    e.preventDefault(); // evita o comportamento padrão do href
-    window.location.href = CHECKOUT_URL; // redireciona para o Hotmart
+    e.preventDefault();
+
+    if (typeof fbq === "function") {
+      fbq('track', 'InitiateCheckout');
+    }
+
+    setTimeout(() => {
+      window.location.href = CHECKOUT_URL;
+    }, 300);
   });
 });
 </script>
@@ -943,6 +949,7 @@ document.addEventListener("visibilitychange", function () {
  
 </body>
   </html>
+
 
 
 
