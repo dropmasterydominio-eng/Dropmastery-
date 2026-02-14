@@ -467,6 +467,13 @@ text-decoration:none;
   will-change: transform, opacity;
 }
 
+ .timer{
+  font-size:1.6rem;
+  margin-top:25px;
+  color:var(--secondary);
+  font-weight:bold;
+ }
+
 </style>
 </head>
 
@@ -536,6 +543,9 @@ Hoje, milhares de pessoas estão construindo rendas paralelas através do comér
 </div>
 </section>
 
+ <div class="timer" id="countdown">
+Oferta expira em 
+ </div>
 
 <!-- 3 APRESENTAÇÃO -->
 <section>
@@ -965,9 +975,47 @@ document.addEventListener("visibilitychange", function () {
 });
 
 </script>
+
+ <script>
+
+let time = 500;
+const countdown = document.getElementById("countdown");
+const buyBtn = document.getElementById("buyBtn");
+
+function updateTimer(){
+
+let minutes = Math.floor(time / 60);
+let seconds = time % 60;
+
+if(seconds < 10){
+seconds = "0" + seconds;
+}
+
+countdown.innerHTML = "Oferta expira em " + minutes + ":" + seconds;
+
+if(time <= 0){
+
+buyBtn.innerText = "Oferta Encerrada";
+buyBtn.style.background = "#555";
+buyBtn.style.pointerEvents = "none";
+countdown.innerHTML = "Oferta encerrada";
+
+return;
+
+}
+
+time--;
+
+}
+
+updateTimer();
+setInterval(updateTimer,1000);
+
+ </script>
  
 </body>
   </html>
+
 
 
 
