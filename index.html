@@ -480,7 +480,7 @@ text-decoration:none;
 <body>
 
 <div class="urgency-bar">
-⚠️ PRÉ-LANÇAMENTO — Restam poucas vagas com preço promocional de $9.99
+⚠️ PRÉ-LANÇAMENTO — Restam poucas vagas com preço promocional de <span id="price-top">$9.99</span>
 </div>
 
 <style>
@@ -496,6 +496,75 @@ text-decoration:none;
   z-index: 9999;
   font-size: 14px;
 }
+
+.countdown-wrapper {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  background:#141414;
+  border:1px solid #2a2a2a;
+  padding:10px 16px;
+  border-radius:12px;
+  width:fit-content;
+  margin:20px auto;
+  font-family:Arial, sans-serif;
+}
+
+.countdown-label {
+  color:#bfbfbf;
+  font-size:14px;
+}
+
+.countdown-timer {
+  font-size:18px;
+  font-weight:bold;
+  color:#e10600;
+  letter-spacing:1px;
+}
+
+.section-dark {
+  background:#0b0b0b;
+  padding:60px 20px;
+}
+
+.section-alt {
+  background:#111111;
+  padding:60px 20px;
+}
+
+.container {
+  max-width:900px;
+  margin:auto;
+}
+
+.section-title {
+  font-size:28px;
+  font-weight:700;
+  text-align:center;
+  margin-bottom:30px;
+  color:white;
+}
+
+.box-dark {
+  background:#141414;
+  border:1px solid #1f1f1f;
+  padding:25px;
+  border-radius:14px;
+  margin-bottom:25px;
+  line-height:1.8;
+  color:#e5e5e5;
+  font-size:16px;
+}
+
+.box-dark li {
+  margin-bottom:10px;
+}
+
+.highlight-red {
+  color:#e10600;
+  font-weight:600;
+}
 </style>
  
 <!-- 1 HERO -->
@@ -504,17 +573,18 @@ text-decoration:none;
 
 <h1>DROP MASTERY</h1>
 
-<p><strong>O Sistema Prático Para Construir Sua Primeira Fonte de Renda Online em 2026</strong></p>
+<p><strong>Como Criar Sua Primeira Estrutura de Renda Online
+Mesmo Sem Experiência, Estoque ou Grande Investimento</strong></p>
 
 <p>
-Aprenda a criar uma estrutura simples de vendas online sem estoque e sem depender de emprego fixo — mesmo começando do absoluto zero.
+Descubra o método simples que iniciantes estão usando para começar no dropshipping do zero e fazer suas primeiras vendas online usando apenas estrutura e estratégia.
 </p>
 
-<a 
+    <a 
       href="https://pay.hotmart.com/N102929996D?off=svkkyh8t&lang=PT_BR"
       class="btn cta"
     >
-      Quero Começar Agora
+      QUERO ACESSAR O MÉTODO AGORA
     </a>
 
     <p class="cta-note">
@@ -524,6 +594,69 @@ Aprenda a criar uma estrutura simples de vendas online sem estoque e sem depende
 </div>
 </section>
 
+<section class="section">
+  <div class="container">
+
+    <h2>O que é Dropshipping?</h2>
+
+    <p class="explain-text">
+      Dropshipping é um modelo de negócio online onde você vende produtos pela internet 
+      sem precisar ter estoque em casa.
+    </p>
+
+    <p class="explain-text">
+      Você cria sua loja virtual, divulga os produtos e, quando alguém compra, 
+      o fornecedor envia diretamente para o cliente.
+    </p>
+
+    <p class="explain-highlight">
+      Ou seja: você foca em vender.  
+      O fornecedor cuida da entrega.
+    </p>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="box">
+      <h2>Antes de continuar, responda rápido:</h2>
+      <p>✔ Você quer começar no dropshipping sem investir alto?</p>
+      <p>✔ Você quer um método simples e direto?</p>
+      <p>✔ Você quer evitar perder dinheiro testando sozinho?</p>
+      <p><strong>Se respondeu sim, esse método foi feito para você.</strong></p>
+    </div>
+   
+  </div>
+</section>
+
+<!-- OFERTA -->
+<section class="problem">
+<div class="container">
+
+<h3>⚠ Oferta de Pré-Lançamento</h3>
+
+<p>
+Treinamentos completos de dropshipping normalmente custam entre $97 e $297.
+
+Mas durante o pré-lançamento você pode acessar o DROP MASTERY por apenas <span id="price-offer">$9.99</span>
+
+Essa condição é temporária e será removida quando o lançamento oficial acontecer.
+</p>
+
+</div>
+</section>
+
+<div class="countdown-wrapper">
+  <span class="countdown-label">⏳ Oferta expira em:</span>
+  <div id="countdown" class="countdown-timer">
+    15:00
+  </div>
+</div>
+
+<p style="text-align:center; color:#ff2b2b; font-weight:bold;">
+Quando o contador zerar, o preço promocional será removido.
+</p>
 
 <!-- 2 PROBLEMA -->
 <section class="problem">
@@ -543,9 +676,6 @@ Hoje, milhares de pessoas estão construindo rendas paralelas através do comér
 </div>
 </section>
 
- <div class="timer" id="countdown">
-Oferta expira em 
- </div>
 
 <!-- 3 APRESENTAÇÃO -->
 <section>
@@ -637,6 +767,29 @@ Primeiros membros recebem bônus e atualizações gratuitas.
       ✔ Acesso imediato &nbsp;•&nbsp; ✔ Garantia de 7 dias &nbsp;•&nbsp; ✔ Suporte incluso
     </p>
 
+<section class="section">
+<div class="container">
+
+<h2>Primeiros resultados que alunos relatam:</h2>
+
+<div class="grid">
+
+<div class="box">
+💬 "Consegui montar minha loja seguindo o passo a passo."
+</div>
+
+<div class="box">
+💬 "Finalmente entendi como escolher produtos que vendem."
+</div>
+
+<div class="box">
+💬 "O método é direto e fácil de aplicar."
+</div>
+
+</div>
+</div>
+</section>
+
 <!-- 6 O QUE RECEBE -->
 <section class="problem">
 <div class="container">
@@ -657,20 +810,72 @@ Primeiros membros recebem bônus e atualizações gratuitas.
 </div>
 </section>
 
+<section class="section-dark">
+  <div class="container">
 
-<!-- 7 BÔNUS -->
-<section>
-<div class="container">
+    <h2 class="section-title">
+      Este método é para você que:
+    </h2>
 
-<h2>Bônus Exclusivos</h2>
+    <div class="box-dark">
+      ✔ Está começando no <span class="highlight-red">dropshipping</span><br>
+      ✔ Tem pouco dinheiro mas quer começar certo<br>
+      ✔ Quer criar renda online real<br>
+      ✔ Prefere um método simples e direto ao ponto
+    </div>
 
-<ul>
-<li>🎁 Templates de anúncios</li>
-<li>🎁 Lista de fornecedores confiáveis</li>
-<li>🎁 Checklists validados</li>
-</ul>
+    <h2 class="section-title">
+      Este método NÃO é para:
+    </h2>
 
-</div>
+    <div class="box-dark">
+      ❌ Quem procura dinheiro fácil<br>
+      ❌ Quem não está disposto a aplicar o método<br>
+      ❌ Quem desiste nos primeiros obstáculos
+    </div>
+
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container">
+
+    <h2 class="section-title">
+      O que você recebe ao entrar hoje
+    </h2>
+
+    <div class="box-dark">
+      ✔ Curso completo Drop Mastery<br>
+      ✔ Método passo a passo testado<br>
+      ✔ Estratégias que realmente funcionam<br>
+      ✔ Acesso imediato após a compra<br>
+      ✔ Atualizações gratuitas futuras<br>
+      ✔ Acesso vitalício ao conteúdo
+    </div>
+
+  </div>
+</section>
+
+<section class="section-dark">
+  <div class="container">
+
+    <h2 class="section-title">
+      🎁 Bônus Exclusivos (Somente Hoje)
+    </h2>
+
+    <div class="box-dark">
+
+      <ul style="list-style:none; padding:0;">
+
+        <li>🎁 Templates prontos de anúncios que convertem</li>
+        <li>🎁 Lista validada de fornecedores confiáveis</li>
+        <li>🎁 Checklists estratégicos para evitar erros</li>
+
+      </ul>
+
+    </div>
+
+  </div>
 </section>
 
 
@@ -685,6 +890,10 @@ Você terá 7 dias para testar o sistema.
 Caso não esteja satisfeito, pode solicitar reembolso total.
 </p>
 
+<p style="text-align:center;">
+Sem risco. Você testa o método primeiro e decide depois.
+</p>
+
 <div class="seal">
 🔒 Compra segura • Proteção ao consumidor • Acesso imediato
 </div>
@@ -692,22 +901,20 @@ Caso não esteja satisfeito, pode solicitar reembolso total.
 </div>
 </section>
 
-
 <!-- 9 OFERTA -->
 <section class="offer">
 <div class="container">
 
 <h2>Oferta de Pré-Lançamento</h2>
 
-<p class="price">$9.99</p>
+<p class="price" id="price">$9.99</p>
 
 <p>Acesso completo ao sistema + bônus exclusivos</p>
 
-<a href="https://pay.hotmart.com/N102929996D..." class="btn">Começar Minha Jornada Para Independência Financeira</a>
+<a href="https://pay.hotmart.com/N102929996D?off=svkkyh8t&lang=PT_BR&sck=HOTMART_PLATFORM&bid=1769792220558" class="btn">Comece agora antes que o preço promocional termine</a>
 
 </div>
 </section>
-
 
 <!-- 10 FAQ -->
 <section class="faq-section">
@@ -731,7 +938,7 @@ Caso não esteja satisfeito, pode solicitar reembolso total.
         <span class="icon">+</span>
       </button>
       <div class="faq-answer">
-        <p>Sim. O treinamento passa por atualizações constantes para acompanhar as mudanças do mercado e das plataformas(2026).</p>
+        <p>Sim. O treinamento passa por atualizações constantes para acompanhar as mudanças do mercado e das plataformas em 2026.</p>
       </div>
     </div>
 
@@ -821,14 +1028,14 @@ Caso não esteja satisfeito, pode solicitar reembolso total.
 <section class="final-cta">
   <div class="final-cta-container">
 
-    <h2>Ainda tem dúvidas?</h2>
+   <h2>Última chance de entrar com preço promocional</h2>
 
     <p class="final-cta-sub">
       Nosso time está pronto para te ajudar a dar o próximo passo com segurança.
     </p>
 
     <a
-      href="https://wa.me/+258858440856"
+      href="https://wa.me/+258858319028"
       target="_blank"
       rel="noopener"
       class="final-cta-button"
@@ -908,7 +1115,7 @@ document.querySelectorAll(".btn").forEach(btn => {
 </script>
 
 <script>
-const buyerNames = [
+const studentNames = [
   "Mario","João","Carlos","Ana","Paulo","Fernanda","Lucas","Bruno",
   "Juliana","Ricardo","Camila","Rafael","Beatriz","Daniel","Aline",
   "Eduardo","Patrícia","Tiago","Vanessa","Felipe","Renata","André",
@@ -918,14 +1125,14 @@ const buyerNames = [
   "Raquel","Alexandre","Priscila","Victor","Amanda","Samuel","Lúcio"
 ];
 
-function showPurchaseNotification() {
+function showStudentNotification() {
   const name =
-    buyerNames[Math.floor(Math.random() * buyerNames.length)];
+    studentNames[Math.floor(Math.random() * studentNames.length)];
 
   const notification = document.createElement("div");
   notification.className = "purchase-notification";
   notification.innerText =
-    `${name} acabou de comprar o DROP MASTERY`;
+    `${name} agora faz parte dos alunos do DROP MASTERY`;
 
   document.body.appendChild(notification);
 
@@ -935,13 +1142,52 @@ function showPurchaseNotification() {
 }
 
 // primeira aparece após 4 segundos
-setTimeout(showPurchaseNotification, 4000);
+setTimeout(showStudentNotification, 4000);
 
-// depois a cada 10 segundos
-setInterval(showPurchaseNotification, 15000);
+// depois a cada 15 segundos
+setInterval(showStudentNotification, 15000);
 </script>
-
+ 
 <script>
+const countdownDuration = 15 * 60; // 15 minutos
+
+let storedTime = localStorage.getItem("dropCountdown");
+
+if (!storedTime) {
+  storedTime = Date.now() + countdownDuration * 1000;
+  localStorage.setItem("dropCountdown", storedTime);
+}
+
+// GARANTE que é número
+storedTime = parseInt(storedTime, 10);
+
+function updateCountdown() {
+  const countdownElement = document.getElementById("countdown");
+  if (!countdownElement) return; // evita erro se DOM não carregou
+
+  const now = Date.now();
+  const timeLeft = Math.floor((storedTime - now) / 1000);
+
+  if (timeLeft <= 0) {
+    localStorage.removeItem("dropCountdown");
+    countdownElement.textContent = "00:00";
+    return;
+  }
+
+  const minutes = String(Math.floor(timeLeft / 60)).padStart(2, '0');
+  const seconds = String(timeLeft % 60).padStart(2, '0');
+
+  countdownElement.textContent = `${minutes}:${seconds}`;
+}
+
+// Garante que roda depois da página carregar
+document.addEventListener("DOMContentLoaded", function(){
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+});
+</script>
+ 
+ <script>
 
 const BACK_REDIRECT_URL = "https://dropmasterydominio-eng.github.io/BACKREDIRRCTED2/";
 
@@ -975,50 +1221,37 @@ document.addEventListener("visibilitychange", function () {
 });
 
 </script>
-
+ 
  <script>
+fetch("https://ipapi.co/json/")
+.then(response => response.json())
+.then(data => {
 
-let time = 500;
-const countdown = document.getElementById("countdown");
-const buyBtn = document.getElementById("buyBtn");
+  let priceMain = document.getElementById("price");
+  let priceTop = document.getElementById("price-top");
+  let priceOffer = document.getElementById("price-offer");
 
-function updateTimer(){
+  let priceValue;
 
-let minutes = Math.floor(time / 60);
-let seconds = time % 60;
+  if(data.country === "MZ"){
+    priceValue = "638 MZN";
+  } 
+  else if(data.country === "BR"){
+    priceValue = "R$ 49,90";
+  } 
+  else {
+    priceValue = "$9.99";
+  }
 
-if(seconds < 10){
-seconds = "0" + seconds;
-}
+  if(priceMain) priceMain.innerText = priceValue;
+  if(priceTop) priceTop.innerText = priceValue;
+  if(priceOffer) priceOffer.innerText = priceValue;
 
-countdown.innerHTML = "Oferta expira em " + minutes + ":" + seconds;
-
-if(time <= 0){
-
-buyBtn.innerText = "Oferta Encerrada";
-buyBtn.style.background = "#555";
-buyBtn.style.pointerEvents = "none";
-countdown.innerHTML = "Oferta encerrada";
-
-return;
-
-}
-
-time--;
-
-}
-
-updateTimer();
-setInterval(updateTimer,1000);
-
- </script>
+})
+.catch(error => {
+  console.log("Erro ao detectar país.");
+});
+</script>
  
 </body>
   </html>
-
-
-
-
-
-
-
