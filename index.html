@@ -565,6 +565,8 @@ text-decoration:none;
   color:#e10600;
   font-weight:600;
 }
+
+.slide.active { display: block; }
 </style>
  
 <!-- 1 HERO -->
@@ -572,12 +574,10 @@ text-decoration:none;
 <div class="container">
 
 <h1>DROP MASTERY</h1>
-
-<p><strong>Como Criar Sua Primeira Estrutura de Renda Online
-Mesmo Sem Experiência, Estoque ou Grande Investimento</strong></p>
+<p>Um caminho claro para quem está começando no dropshipping do zero.</p>
 
 <p>
-Descubra o método simples que iniciantes estão usando para começar no dropshipping do zero e fazer suas primeiras vendas online usando apenas estrutura e estratégia.
+  Descubra o método visual e passo a passo que ajuda iniciantes a estruturarem sua primeira operação de dropshipping com clareza e direção.
 </p>
 
     <a 
@@ -586,10 +586,6 @@ Descubra o método simples que iniciantes estão usando para começar no dropshi
     >
       QUERO ACESSAR O MÉTODO AGORA
     </a>
-
-    <p class="cta-note">
-      ✔ Acesso imediato &nbsp;•&nbsp; ✔ Garantia de 7 dias &nbsp;•&nbsp; ✔ Suporte incluso
-    </p>
 
 </div>
 </section>
@@ -647,30 +643,13 @@ Essa condição é temporária e será removida quando o lançamento oficial aco
 </div>
 </section>
 
-<div class="countdown-wrapper">
-  <span class="countdown-label">⏳ Oferta expira em:</span>
-  <div id="countdown" class="countdown-timer">
-    15:00
-  </div>
-</div>
-
-<p style="text-align:center; color:#ff2b2b; font-weight:bold;">
-Quando o contador zerar, o preço promocional será removido.
-</p>
-
 <!-- 2 PROBLEMA -->
 <section class="problem">
 <div class="container">
 
-<h2>Independência Financeira Não Acontece Com Apenas Uma Fonte de Renda</h2>
-
+<h2>Ter apenas uma fonte de renda limita o crescimento</h2>
 <p>
-Salário fixo parece seguro…  
-Mas limita o crescimento financeiro.
-</p>
-
-<p>
-Hoje, milhares de pessoas estão construindo rendas paralelas através do comércio online — sem fabricar produtos ou manter estoque.
+  Muitos empreendedores digitais estão usando o dropshipping para criar uma segunda fonte de receita online.
 </p>
 
 </div>
@@ -770,23 +749,11 @@ Primeiros membros recebem bônus e atualizações gratuitas.
 <section class="section">
 <div class="container">
 
-<h2>Primeiros resultados que alunos relatam:</h2>
-
+<h2>O que alunos estão dizendo sobre o método</h2>
 <div class="grid">
-
-<div class="box">
-💬 "Consegui montar minha loja seguindo o passo a passo."
-</div>
-
-<div class="box">
-💬 "Finalmente entendi como escolher produtos que vendem."
-</div>
-
-<div class="box">
-💬 "O método é direto e fácil de aplicar."
-</div>
-
-</div>
+  <div class="box">“Consegui montar minha loja seguindo o passo a passo.”</div>
+  <div class="box">“Finalmente entendi como escolher produtos com demanda.”</div>
+  <div class="box">“O método é direto e fácil de seguir.”</div>
 </div>
 </section>
 
@@ -817,12 +784,11 @@ Primeiros membros recebem bônus e atualizações gratuitas.
       Este método é para você que:
     </h2>
 
-    <div class="box-dark">
-      ✔ Está começando no <span class="highlight-red">dropshipping</span><br>
-      ✔ Tem pouco dinheiro mas quer começar certo<br>
-      ✔ Quer criar renda online real<br>
-      ✔ Prefere um método simples e direto ao ponto
-    </div>
+<div class="box-dark">
+  ✔ Quer começar no <span class="highlight-red">dropshipping</span> com um método claro e estruturado<br>
+  ✔ Tem pouco dinheiro mas quer aplicar algo prático<br>
+  ✔ Prefere um caminho simples e direto ao ponto
+</div>
 
     <h2 class="section-title">
       Este método NÃO é para:
@@ -944,11 +910,11 @@ Sem risco. Você testa o método primeiro e decide depois.
 
     <div class="faq-item">
       <button class="faq-question">
-        Quanto tempo demora para ter resultados?
-        <span class="icon">+</span>
-      </button>
+  Quanto tempo leva para entender e aplicar o método?
+  <span class="icon">+</span>
+</button>
       <div class="faq-answer">
-        <p>Os resultados variam de pessoa para pessoa. Tudo depende da aplicação prática do método ensinado.</p>
+        <p>A compreensão básica pode ser feita em poucas horas, e a aplicação prática começa assim que você executa os primeiros passos no mesmo dia.</p>
       </div>
     </div>
 
@@ -1062,7 +1028,8 @@ Sem risco. Você testa o método primeiro e decide depois.
 </p>
 
 <p style="margin-top:10px; opacity:0.7;">
-Este produto não garante resultados financeiros específicos.
+Este produto não garante resultados financeiros específicos. Resultados variam conforme dedicação e aplicação do método.
+</p>
 </p>
 
 </footer>
@@ -1132,7 +1099,7 @@ function showStudentNotification() {
   const notification = document.createElement("div");
   notification.className = "purchase-notification";
   notification.innerText =
-    `${name} agora faz parte dos alunos do DROP MASTERY`;
+    `${name} é aluno/a do DROP MASTERY`;
 
   document.body.appendChild(notification);
 
@@ -1146,45 +1113,6 @@ setTimeout(showStudentNotification, 4000);
 
 // depois a cada 15 segundos
 setInterval(showStudentNotification, 15000);
-</script>
- 
-<script>
-const countdownDuration = 15 * 60; // 15 minutos
-
-let storedTime = localStorage.getItem("dropCountdown");
-
-if (!storedTime) {
-  storedTime = Date.now() + countdownDuration * 1000;
-  localStorage.setItem("dropCountdown", storedTime);
-}
-
-// GARANTE que é número
-storedTime = parseInt(storedTime, 10);
-
-function updateCountdown() {
-  const countdownElement = document.getElementById("countdown");
-  if (!countdownElement) return; // evita erro se DOM não carregou
-
-  const now = Date.now();
-  const timeLeft = Math.floor((storedTime - now) / 1000);
-
-  if (timeLeft <= 0) {
-    localStorage.removeItem("dropCountdown");
-    countdownElement.textContent = "00:00";
-    return;
-  }
-
-  const minutes = String(Math.floor(timeLeft / 60)).padStart(2, '0');
-  const seconds = String(timeLeft % 60).padStart(2, '0');
-
-  countdownElement.textContent = `${minutes}:${seconds}`;
-}
-
-// Garante que roda depois da página carregar
-document.addEventListener("DOMContentLoaded", function(){
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
-});
 </script>
  
  <script>
